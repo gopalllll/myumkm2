@@ -252,50 +252,21 @@ footer p {
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="section">
-                    <h3>Tasty Food</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h3>Useful links</h3>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Hewan</a></li>
-                        <li><a href="#">Galeri</a></li>
-                        <li><a href="#">Testimonial</a></li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h3>Privacy</h3>
-                    <ul>
-                        <li><a href="#">Karir</a></li>
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Kontak Kami</a></li>
-                        <li><a href="#">Servis</a></li>
-                    </ul>
-                </div>
-                <div class="section">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li><a href="mailto:tastyfood@gmail.com"><i class="fas fa-envelope"></i> tastyfood@gmail.com</a></li>
-                        <li><a href="tel:+6281234567890"><i class="fas fa-phone-alt"></i> +62 812 3456 7890</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Kota Bandung, Jawa Barat</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright ©2023 All rights reserved</p>
-            </div>
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-600	text-white mt-20">
+    <div class="container mx-auto px-4 py-8 flex justify-between items-center">
+        <div class="m-4">
+            <h1>Kopi Bah Daum</h1>
+            <p>Kopi arabika yang dipetik dari Gunung Sangar dan diolah dengan menggunakan proses natural.</p>
         </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <div class="m-4">
+            <h2>Contact Info</h2>
+            <ul class="list-none p-0">
+                <li class="my-2">Phone: +62 812 3456 7890</li>
+                <li class="my-2">Location: Arjasari Kabupaten Bandung, Jawa Barat</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
