@@ -11,538 +11,83 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
-
-  <title> Tasty Food </title>
-
-  <style>
-    /* General Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1rem;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.col-md-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/* Hero Area */
-.hero_area {
-  position: relative;
-  background-color: #000;
-  padding: 100px 0;
-}
-
-.bg-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.bg-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.header_section {
-  position: relative;
-  z-index: 1;
-}
-
-.custom_nav-container {
-  background: transparent;
-  padding: 0;
-}
-
-.navbar-brand {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  margin-right: auto;
-}
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-item {
-  margin-right: 30px;
-}
-
-.nav-link {
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.nav-link.active {
-  font-weight: bold;
-}
-
-.user_option {
-  display: flex;
-  align-items: center;
-}
-
-.user_link {
-  margin-right: 30px;
-  color: #fff;
-  font-size: 20px;
-}
-
-.user_link:hover {
-  color: #007bff;
-}
-
-.nav_search-btn {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-}
-
-/* Book Section */
-.book_section {
-  padding: 100px 0;
-}
-
-.heading_container {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.heading_container h2 {
-  font-size: 36px;
-  color: #333;
-}
-
-.form_container {
-  padding: 30px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.btn_box {
-  text-align: center;
-}
-
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.map_container {
-  height: 400px;
-}
-
-/* Footer Section */
-.footer_section {
-  background-color: #000;
-  padding: 50px 0;
-  color: #fff;
-}
-
-.footer-col {
-  padding: 0 15px;
-}
-
-.footer_contact h4 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.contact_link_box a {
-  display: block;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.contact_link_box a i {
-  margin-right: 10px;
-}
-
-.footer_detail {
-  text-align: center;
-}
-
-.footer-logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.footer_social a {
-  display: inline-block;
-  margin: 0 5px;
-  color: #fff;
-  font-size: 20px;
-}
-
-.footer_social a:hover {
-  color: #007bff;
-}
-
-.footer-info {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .col-md-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-/* Owl Carousel Styles */
-.owl-carousel .owl-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.owl-carousel .owl-nav button {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.owl-carousel .owl-nav button:hover {
-  color: #007bff;
-}
-
-/* Nice Select Styles */
-.nice-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  background: #fff;
-}
-
-.nice-select .list {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.nice-select .list .option {
-  padding: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.nice-select .list .option:hover {
-  background-color: #f2f2f2;
-}
-
-.nice-select .list .option.selected {
-  background-color: #e9ecef;
-}
-
-.nice-select .list .option .icon {
-  display: none;
-}
-
-/* Google Map Styles */
-#googleMap {
-  height: 400px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-</style>
-
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title> My Coffee </title>
 </head>
 
-<body class="sub_page">
-
-  <div class="hero_area">
-    <div class="bg-box">
-        <img src="{{ url('/assets/images/hero-bg.jpg') }}" alt="">
-    </div>
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Tasty Food
-            </span>
-          </a>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  mx-auto ">
-              <li class="nav-item">
-                <a class="nav-link" href="index">Home </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="menu">Berita</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about">Tentang</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="book">Kontak <span class="sr-only">(current)</span> </a>
-              </li>
-            </ul>
-            <div class="user_option">
-              <a href="" class="user_link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-              
-              <form class="form-inline">
-                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                  <i class="fa fa-search" aria-hidden="true"></i>
+<body class="bg-gray-100">
+    <header class="bg-white rounded-xl border-2 border-stone text-gray-800">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="font-bold text-2xl sm:text-3xl">Kopi Bah Daum</h1>
+            <div class="sm:hidden">
+                <button id="menu-btn" class="focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
                 </button>
-              </form>
-              
-            </div>
-          </div>
-        </nav>
-      </div>
+            </div>        
+            <nav class="hidden sm:flex sm:items-center gap-6">
+                <a href="{{ route('landing') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Home</a>
+                <a href="{{ route('menu') }}" class="shrink-0 border-b-2 border-sky-500 px-1 pb-4 text-sm font-medium text-sky-600" aria-current="page">Menu</a>
+                <a href="{{ route('kontak') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Pesanan</a>
+                <a href="{{ route('tentang') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Tentang</a>
+                <a href="{{ route('home') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Admin Login</a>
+            </nav>
+        </div>
+        <div id="menu" class="hidden sm:hidden">
+            <nav class="flex flex-col gap-4 px-4 py-4 bg-gray-100 rounded-xl">
+                <a href="{{ route('landing') }}" class="text-gray-800 hover:text-gray-700">Home</a>                  
+                <a href="{{ route('menu') }}" class="text-gray-800 hover:text-gray-700">Menu</a>
+                <a href="{{ route('kontak') }}" class="text-gray-800 hover:text-gray-700">Cek Pesanan</a>                   
+                <a href="{{ route('tentang') }}" class="text-gray-800 hover:text-gray-700">Tentang</a>
+                <a href="{{ route('home') }}" class="text-gray-800 hover:text-gray-700">Admin Login</a>
+            </nav>
+        </div>
     </header>
-    <!-- end header section -->
-  </div>
 
-  <!-- book section -->
-  <section class="book_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Kontak Kami
-        </h2>
+  <section class="container mx-auto mt-12">
+    <h2 class="text-3xl font-bold text-center mb-6 text-gray-800">PRODUK KAMI</h2>
+    <div class="grid grid-cols-3 gap-4 items-center mb-10">
+      <div class="col-span-1 flex justify-center">
+        <img src="{{ asset('images/kopiutama.png')}}" alt="" class="max-w-full h-auto object-cover">
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
-              </div>
-              <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="tektarea" class="form-control" placeholder="komentar" />
-              </div>
-              <div>
-                <select class="form-control nice-select wide">
-                  <option value="" disabled selected>
-                    How many persons?
-                  </option>
-                  <option value="">
-                    2
-                  </option>
-                  <option value="">
-                    3
-                  </option>
-                  <option value="">
-                    4
-                  </option>
-                  <option value="">
-                    5
-                  </option>
-                </select>
-              </div>
-              <div>
-                <input type="date" class="form-control">
-              </div>
-              <div class="btn_box">
-                <button>
-                  Kirim
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map_container ">
-            <div id="googleMap"></div>
-          </div>
-        </div>
+      <div class="col-span-2 space-y-4 text-gray-800">
+          <h2>Kopi Arabika Natural</h2>
+          <p>Nikmati cita rasa asli biji Kopi Arabika Gunung Sangar yang dijemur langsung di bawah sinar matahari. Proses pengeringan alami ini menghasilkan kopi dengan karakteristik buah yang kaya dan aroma yang kompleks. Dipanggang dengan tingkat medium, kopi ini menawarkan keseimbangan sempurna antara asam buah, body yang lembut, dan aftertaste yang panjang.</p>
+          <h2>Kopi Arabika Natural Wine</h2>
+          <p>Sebuah perjalanan rasa yang unik. Biji Kopi Gunung Sangar ini menjalani proses fermentasi panjang selama berbulan-bulan, memberikan karakteristik rasa yang mirip dengan wine. Dengan proses pengeringan alami dan roasting medium, kopi ini menghadirkan profil rasa yang kompleks dengan nuansa buah-buahan gelap, cokelat, dan sedikit asam yang menyegarkan.</p>
       </div>
+    </div>
+    <div class="grid grid-cols-3 gap-4 ">
+        <div><img src="{{ asset('images/kopikiri.png')}}" alt="" class="max-w-full h-auto object-cover"></div>
+        <div><img src="{{ asset('images/kopitengah.png')}}" alt="" class="max-w-full h-auto object-cover"></div>
+        <div><img src="{{ asset('images/kopikanan.png')}}" alt="" class="max-w-full h-auto object-cover"></div>
     </div>
   </section>
-  <!-- end book section -->
 
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 footer-col">
-          <div class="footer_contact">
-            <h4>
-              Contact Us
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
+  <footer class="bg-white mt-10">
+      <div class="mx-auto px-4 pb-8 sm:px-6 lg:px-8 lg:pt-10">
+          <div class="text-center">
+              <div class="text-center mb-5">
+                  <a href="#" class="text-5xl text-slate-950">Kopi</a>
+                  <br>
+                  <a href="#" class="text-5xl font-bold text-slate-950">Bah Daum</a>
+              </div>        
+              <p class="text-center text-slate-950">
+                Dari ketinggian Gunung Sangar, lahirlah kopi Arabika dengan karakter yang unik. Dirawat dengan penuh kasih sayang oleh para petani, setiap bulir kopi menghasilkan minuman yang kaya akan rasa dan aroma. Dengan proses pengolahan yang teliti, kopi ini menawarkan pengalaman minum yang tak terlupakan. Setiap tegukan adalah persembahan dari alam dan dedikasi manusia.
+              </p>
+              <a href="https://api.whatsapp.com/send/?phone=6287805343899&text=Halo+Saya+Berminat+Untuk+Membeli+Kopi+Bah+Daum!&type=phone_number&app_absent=0" target="_blank"
+                class="mt-8 mb-8 inline-block rounded-full border bg-blue-500 px-12 py-3 text-sm font-medium text-white hover:bg-blue-700 hover:text-white focus:outline-none focus:ring ">
+                Beli Sekarang!
               </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +62 81234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  tastyfood@gmail.com
-                </span>
-              </a>
-            </div>
+              <ul class="list-none p-0 space-y-2 text-slate-950 text-sm md:text-base">
+                  <li class="my-2">Phone: +62 812 3456 7890</li>
+                  <li class="my-2">Location: Arjasari Kabupaten Bandung, Jawa Barat</li>
+              </ul>
           </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Tasty Food
-            </a>
-            <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
-            </p>
-            <div class="footer_social">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 footer-col">
-          <h4>
-            Opening Hours
-          </h4>
-          <p>
-            Everyday
-          </p>
-          <p>
-            10.00 Am -10.00 Pm
-          </p>
-        </div>
       </div>
-      <div class="footer-info">
-        
-      </div>
-    </div>
   </footer>
-  <!-- footer section -->
-
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
 
 </body>
 

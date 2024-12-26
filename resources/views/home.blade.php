@@ -1,352 +1,139 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasty Food</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <style>
-        /* General Styling */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .navbar-brand {
-            color : black;
-            font-size: 15px;
-            font-weight: bold;
-            align-items: center;
-        }
-        .nav-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-        }
-        .nav-links a:hover {
-            color: #ccc;
-        }
-        .btn {
-            color: #fff;
-            padding: 0.5em 1em;
-            border: none;
-            border-radius: 0.5em;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: white;
-        }
-/* Jumbotron */
-.jumbotron {
-  background-color: #fff;
-  padding: 4rem 0;
-  margin-bottom: 4rem;
-}
-
-.jumbotron h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.jumbotron p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.jumbotron .btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-}
-
-/* Features */
-.features {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-
-.features .card {
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-.features .card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* About */
-.about {
-  padding: 4rem 0;
-  background-color: #f2f2f2;
-}
-
-.about h2 {
-  color: #333;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.about p {
-  color: #555;
-  font-size: 1.1rem;
-}
-
-/* Contact */
-.contact {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-
-.contact h2 {
-  color: #333;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.contact .card {
-  border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-}
-
-.contact .card-body {
-  padding: 2rem;
-}
-
-.contact .card-title {
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.contact .card-text {
-  color: #555;
-  font-size: 1rem;
-}
-
-/* Footer */
-footer {
-  background-color: #f9f9f9;
-  padding: 20px 0;
-  color: #666;
-}
-
-footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-footer .row {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer .col-md-4 {
-  flex-grow: 2;
-  flex-basis: 33.33%;
-  margin: 10px;
-}
-
-footer h5 {
-  font-weight: bold;
-  margin-top: 0;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-footer li {
-  margin-bottom: 10px;
-}
-
-footer a {
-  color: #337ab7;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #23527c;
-}
-
-footer p {
-  margin-bottom: 20px;
-}
-
-footer .copyright {
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .jumbotron h1 {
-    font-size: 2.5rem;
-  }
-
-  .jumbotron p {
-    font-size: 1rem;
-  }
-
-  .features .card-img-top {
-    height: 150px;
-  }
-}
-
-@media (max-width: 576px) {
-  .jumbotron h1 {
-    font-size: 2rem;
-  }
-
-  .features .card-img-top {
-    height: 100px;
-  }
-}
-
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title> My Coffee </title>
 </head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-brand">My UMKM</div>
-        <ul class="nav-links">
-            <a href="{{ route('home') }}" class="btn">Home</a>
-            <a href="{{ route('menu') }}" class="btn">Menu </a>
-            <a href="{{ route('testimoni') }}"class="btn">Testimoni</a>
-            <a href="{{ route('tentang') }}" class="btn">Tentang </a> 
-            <a href="{{ route('kontak') }}"class="btn">Kontak</a>
-        </ul>
-    </nav>
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-4">Our Signature</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare, augue eu rutrum commodo, dui diam convallis arcu, eget consectetur ex sem eget lacus.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
+    <body class="bg-gray-100">
+        <header class="bg-white rounded-xl border-2 border-stone text-gray-800">
+            <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+                <nav class="hidden sm:flex sm:items-center gap-6">
+                    <a href="{{ route('landing') }}" class="shrink-0 border-b-2 border-sky-500 px-1 pb-4 text-sm font-medium text-sky-600" aria-current="page">Home</a>
+                    <a href="{{ route('menu') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Menu</a>
+                    <a href="{{ route('kontak') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Pesanan</a>
+                    <a href="{{ route('tentang') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Tentang</a>
+                    <a href="{{ route('home') }}" class="shrink-0 border-b-2 border-transparent px-1 pb-4 text-sm font-medium text-gray-800 hover:border-gray-300 hover:text-gray-700">Admin Login</a>
+                </nav>
+                <div class="sm:hidden ml-auto">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>  
+            </div>
+            <div id="menu" class="hidden sm:hidden">
+                <nav class="flex flex-col gap-4 px-4 py-4 bg-gray-100 rounded-xl">
+                    <a href="{{ route('landing') }}" class="text-gray-800 hover:text-gray-700">Home</a>
+                    <a href="{{ route('menu') }}" class="text-gray-800 hover:text-gray-700">Menu</a>
+                    <a href="{{ route('kontak') }}" class="text-gray-800 hover:text-gray-700">Pesanan</a>
+                    <a href="{{ route('tentang') }}" class="text-gray-800 hover:text-gray-700">Tentang</a>
+                    <a href="{{ route('home') }}" class="text-gray-800 hover:text-gray-700">Admin Login</a>
+                </nav>
+            </div>
+        </header>
+        <div class="hero-section relative bg-gradient-to-r from-gray-900 to-gray-600 flex items-center hidden sm:flex"> <!-- Hides on mobile, shows on sm and above -->
+            <img src="{{ asset('images/homekopi.png')}}" class="hero-image absolute right-0 bottom-22 w-1/2 md:w-1/3 lg:w-1/3">
         </div>
-    </section>
+        </div>
+        <div class="container mx-auto mb-5 px-4">
+            <div class="mt-10 mb-5">
+                <a href="#" class="text-5xl mt-20 text-slate-950">Kopi</a>
+                <br>
+                <a href="#" class="text-5xl font-bold text-slate-950">Bah Daum</a>
+            </div>
+            <p class="text-lg text-slate-950 mb-6">
+                Kopi medium roast kami disangrai dengan suhu dan waktu yang tepat untuk menghasilkan cita rasa yang kompleks.
+            <br>
+                Proses roasting yang cermat ini menghasilkan biji kopi dengan warna cokelat keemasan dan aroma yang menggoda.
+            <br>
+                Rasakan perbedaannya dalam setiap tegukan.
+            </p>
+            <a href="{{ route('tentang') }}" class="btn bg-transparent border-transparent hover:bg-blue-500 hover:text-white text-slate-950">Tentang Kami</a>
+        </div>
+        <div class="text-center bg-gray-200 py-16">
+            <h2 class="text-3xl font-bold mt-5 mb-7 text-slate-950">TENTANG KAMI</h2>
+            <p class=" text-slate-950">
+            Kopi Arabika Gunung Sangar adalah cerita tentang kehati-hatian dan keaslian. 
+            <br>Diproses secara full washed, medium roast yang dihasilkan tidak sekadar rupa, tapi juga sebuah perjalanan rasa.
+            <br>Dari biji kopi pilihan di lereng gunung hingga aroma yang memikat, setiap tegukan memberikan pengalaman yang mendalam dan memuaskan. 
+            <br>Diibaratkan seperti kisah asmara yang penuh gairah, setiap cangkirnya memancarkan pesona yang menggoda dengan cita rasa yang kuat namun halus.
+            </p>
+        </div>
+        <section class="container  mx-auto mt-10  text-slate-950">
+            <h2 class="text-3xl font-bold text-center mt-5 mb-6">PRODUK KAMI</h2>
+            <div class="grid grid-cols-3 gap-4 items-center mb-10">
+                <div class="col-span-1 flex justify-center">
+                    <img src="{{ asset('images/kopiutama.png')}}" alt="" class="max-w-full h-auto object-cover">
+                </div>
+                <div class="col-span-2 space-y-4">
+                    <h2>Kopi Arabika Natural</h2>
+                    <p>Nikmati cita rasa asli biji Kopi Arabika Gunung Sangar yang dijemur langsung di bawah sinar matahari. Proses pengeringan alami ini menghasilkan kopi dengan karakteristik buah yang kaya dan aroma yang kompleks. Dipanggang dengan tingkat medium, kopi ini menawarkan keseimbangan sempurna antara asam buah, body yang lembut, dan aftertaste yang panjang.</p>
+                    <h2>Kopi Arabika Natural Wine</h2>
+                    <p>Sebuah perjalanan rasa yang unik. Biji Kopi Gunung Sangar ini menjalani proses fermentasi panjang selama berbulan-bulan, memberikan karakteristik rasa yang mirip dengan wine. Dengan proses pengeringan alami dan roasting medium, kopi ini menghadirkan profil rasa yang kompleks dengan nuansa buah-buahan gelap, cokelat, dan sedikit asam yang menyegarkan.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 gap-4 ">
+                <div>
+                    <img src="{{ asset('images/kopikiri.png')}}" alt="" class="max-w-full h-auto object-cover">
+                </div>
+                <div>
+                    <img src="{{ asset('images/kopitengah.png')}}" alt="" class="max-w-full h-auto object-cover">
+                </div>
+                <div>
+                    <img src="{{ asset('images/kopikanan.png')}}" alt="" class="max-w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
 
-    <section class="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{ asset('images/food1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 1</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
+        <div class="container mx-auto px-4 mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 rounded-lg bg-white text-slate-950">
+                    <h2 class="text-xl font-bold mb-2">Keunggulan</h2>
+                    <ul class="list-disc ml-4">
+                        <li>Cita rasa yang kompleks</li>
+                        <li>Aroma yang menggoda</li>
+                        <li>Warna cokelat keemasan</li>
+                        <li>Proses roasting yang cermat</li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{ asset('images/food2.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 2</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="{{ asset('images/food3.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Feature 3</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        </div>
-                    </div>
+                <div class="p-4 rounded-lg bg-white text-slate-950">
+                    <h2 class="text-xl font-bold mb-2">Manfaat</h2>
+                    <ul class="list-disc ml-4">
+                        <li>Meningkatkan konsentrasi</li>
+                        <li>Meningkatkan energi</li>
+                        <li>Membantu pencernaan</li>
+                        <li>Menghilangkan rasa lelah</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <h2 class="text-center">Menu Kami</h2>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare, augue eu rutrum commodo, dui diam convallis arcu, eget consectetur ex sem eget lacus. Nullam vitae dignissim neque, vel luctus ex. Fusce sit amet viverra ante.</p>
-        </div>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <h2 class="text-center">Testimoni</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Address</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ornare, augue eu rutrum commodo, dui diam convallis arcu, eget consectetur ex sem eget lacus. Nullam vitae dignissim neque, vel luctus ex. Fusce sit amet viverra ante.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Phone</h5>
-                            <p class="card-text">+62 812 3456 7890</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Email</h5>
-                            <p class="card-text">tastyfood@gmail.com</p>
-                        </div>
-                    </div>
+        
+        <footer class="bg-white mt-10">
+            <div class="mx-auto px-4 pb-8 sm:px-6 lg:px-8 lg:pt-10">
+                <div class="text-center">
+                    <div class="text-center mb-5">
+                        <a href="#" class="text-5xl text-slate-950">Kopi</a>
+                        <br>
+                        <a href="#" class="text-5xl font-bold text-slate-950">Bah Daum</a>
+                    </div>        
+                    <p class="text-center text-slate-950">
+                    Dari ketinggian Gunung Sangar, lahirlah kopi Arabika dengan karakter yang unik. Dirawat dengan penuh kasih sayang oleh para petani, setiap bulir kopi menghasilkan minuman yang kaya akan rasa dan aroma. Dengan proses pengolahan yang teliti, kopi ini menawarkan pengalaman minum yang tak terlupakan. Setiap tegukan adalah persembahan dari alam dan dedikasi manusia.
+                    </p>
+                    <a href="https://api.whatsapp.com/send/?phone=6281953783100&text=Halo+Saya+Berminat+Untuk+Membeli+Kopi+Bah+Daum!&type=phone_number&app_absent=0" target="_blank"
+                    class="mt-8 mb-8 inline-block rounded-full border bg-blue-500 px-12 py-3 text-sm font-medium text-white hover:bg-blue-700 hover:text-white focus:outline-none focus:ring ">
+                    Beli Sekarang!
+                    </a>
+                    <ul class="list-none p-0 space-y-2 text-slate-950 text-sm md:text-base">
+                            <li class="my-2">Phone: +62 812 3456 7890</li>
+                            <li class="my-2">Location: Arjasari Kabupaten Bandung, Jawa Barat</li>
+                        </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </body>
 
-    <footer>
-  <div class="container">
-    <div class="row">
-    <div class="col-md-4">
-        <h5>About Our Company</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h5>Useful Links</h5>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <h5>Contact Us</h5>
-        <p>
-          Address: Jalan Sudirman No. 123, Jakarta 10220<br>
-          Phone: +62 21 1234 5678<br>
-          Email: <a href="mailto:info@example.com">info@example.com</a>
-        </p>
-      </div>
-  </div>
-  <div class="col-md-12">
-        <p>&copy; 2023 Example Company. All rights reserved.</p>
-      </div>
-</footer>
-
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
 </html>
